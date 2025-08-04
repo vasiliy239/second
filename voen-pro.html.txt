@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правовая защита военнослужащих | Помощь в получении земли и льгот</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #1a3e72;
+            --secondary: #e63946;
+            --accent: #f4a261;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(rgba(26, 62, 114, 0.9), rgba(26, 62, 114, 0.9)), url('https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+            color: white;
+            padding: 2rem 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            margin: 1rem auto 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #c1121f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .features {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .feature-card:hover .feature-img img {
+            transform: scale(1.1);
+        }
+        
+        .feature-content {
+            padding: 1.5rem;
+        }
+        
+        .feature-content h3 {
+            margin-top: 0;
+        }
+        
+        .process {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+        
+        .step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            width: 30px;
+            height: 2px;
+            background: var(--primary);
+        }
+        
+        .testimonials {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(26, 62, 114, 0.9), rgba(26, 62, 114, 0.9)), url('https://images.unsplash.com/photo-1580130732478-4e339fb33746?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            color: white;
+        }
+        
+        .testimonials h2:after {
+            background: var(--accent);
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+        }
+        
+        .cta {
+            padding: 5rem 0;
+            text-align: center;
+            background: var(--light);
+        }
+        
+        .cta-box {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .step:not(:last-child):after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="header-content">
+                <div class="hero-text">
+                    <h1>Правовая защита и поддержка военнослужащих</h1>
+                    <p>Профессиональное юридическое сопровождение для получения земельных участков, льгот и социальных гарантий</p>
+                    <a href="#contact" class="btn animate__animated animate__pulse animate__infinite">Получить консультацию</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="animate__animated animate__fadeInUp">Наши услуги</h2>
+            <div class="features-grid">
+                <div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Земельные участки">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Земельные участки</h3>
+                        <p>Полное сопровождение процедуры получения земельного участка для военнослужащих в Ленинградской области и других регионах РФ.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Военные льготы">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Военные льготы</h3>
+                        <p>Помощь в оформлении всех положенных льгот, субсидий и социальных выплат для военнослужащих и ветеранов.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="feature-img">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Жилищные программы">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Жилищные программы</h3>
+                        <p>Юридическая поддержка при участии в программах военной ипотеки и получении служебного жилья.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <h2 class="animate__animated animate__fadeInUp">Как мы работаем</h2>
+            <div class="process-steps">
+                <div class="step animate__animated animate__fadeInUp">
+                    <div class="step-number">1</div>
+                    <h3>Консультация</h3>
+                    <p>Анализируем вашу ситуацию и определяем оптимальный путь решения вопроса</p>
+                </div>
+                
+                <div class="step animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="step-number">2</div>
+                    <h3>Подготовка</h3>
+                    <p>Собираем необходимые документы и составляем заявления</p>
+                </div>
+                
+                <div class="step animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="step-number">3</div>
+                    <h3>Сопровождение</h3>
+                    <p>Представляем ваши интересы в государственных органах</p>
+                </div>
+                
+                <div class="step animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="step-number">4</div>
+                    <h3>Результат</h3>
+                    <p>Вы получаете положенные льготы, участок или жилье</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="animate__animated animate__fadeInUp">Отзывы клиентов</h2>
+            <div class="testimonial-card animate__animated animate__fadeInUp">
+                <p class="testimonial-text">"Благодаря специалистам центра получил земельный участок в Ленобласти всего за 3 месяца. Самостоятельно бы не справился с этим объемом документов."</p>
+                <p class="testimonial-author">— Андрей С., капитан запаса</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta">
+        <div class="container">
+            <div class="cta-box animate__animated animate__fadeInUp">
+                <h2>Оставьте заявку на консультацию</h2>
+                <p>Наши юристы свяжутся с вами в течение 1 рабочего дня</p>
+                
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" placeholder="Опишите вашу ситуацию"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">Центр правовой защиты</div>
+                    <p>Профессиональная юридическая помощь военнослужащим и их семьям</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Земельные участки</a></li>
+                        <li><a href="#">Военные льготы</a></li>
+                        <li><a href="#">Жилищные программы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Санкт-Петербург</li>
+                        <li>+7 (XXX) XXX-XX-XX</li>
+                        <li>info@voenpravo.ru</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 Центр правовой защиты военнослужащих. Все права защищены.</p>
+                <p><a href="#" style="color: #adb5bd;">Политика конфиденциальности</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
